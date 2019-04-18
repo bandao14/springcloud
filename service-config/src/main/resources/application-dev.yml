@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: application-dev
+  profiles:
+    active: dev
