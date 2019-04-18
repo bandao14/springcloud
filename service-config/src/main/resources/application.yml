@@ -1,0 +1,12 @@
+server:
+  port: 9095
+spring:
+  application:
+    name: service-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/bandao14/springcloud
+          default-label: master
+          search-paths: '{application}'
