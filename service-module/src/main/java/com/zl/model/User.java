@@ -1,11 +1,16 @@
 package com.zl.model;
 
-public class User {
 
+import com.alibaba.fastjson.JSONObject;
+
+import java.io.Serializable;
+
+public class User implements Serializable {
+    //private static final long serialVersionUID = 1L;
     private int id;
     private String name;
     private String sex;
-
+    private JSONObject info;
     public User(){
 
     }
@@ -33,12 +38,22 @@ public class User {
     public void setSex(String sex) {
         this.sex = sex;
     }
+
+    public JSONObject getInfo() {
+        return info;
+    }
+
+    public void setInfo(JSONObject info) {
+        this.info = info;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", sex='" + sex + '\'' +
+                ", info=" + info +
                 '}';
     }
 }

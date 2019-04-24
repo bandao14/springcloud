@@ -4,4 +4,13 @@
     <select id="query" resultType="user">
         select * from users
     </select>
+
+    <insert id="insert" parameterType="user">
+        insert into users(name,sex,info)
+        values(
+        #{name},
+        #{sex},
+        #{info,jdbcType=VARCHAR,typeHandler=com.zl.util.MySqlJsonHandler}
+        )
+    </insert>
 </mapper>

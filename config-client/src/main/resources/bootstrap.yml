@@ -1,0 +1,20 @@
+server:
+  port: 9096
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      uri: http://localhost:9094/
+      profile: dev,test
+      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9090/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 1
+    lease-renewal-interval-in-seconds: 2
+
+

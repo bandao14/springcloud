@@ -1,5 +1,0 @@
-foo: foo version 1
-test: 我是你爸爸
-spring:
-  messages:
-    encoding: UTF-8

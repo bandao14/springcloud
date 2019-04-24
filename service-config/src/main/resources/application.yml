@@ -1,5 +1,5 @@
 server:
-  port: 9095
+  port: 9094
 spring:
   application:
     name: service-config
@@ -7,6 +7,14 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/bandao14/springcloud
-          default-label: master
+          uri: https://github.com/bandao14/Spring-Cloud-Config
           search-paths: '{application}'
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9090/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 1
+    lease-renewal-interval-in-seconds: 2
